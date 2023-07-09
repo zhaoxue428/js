@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. input two number and + - * /
+      let num1 = +prompt("please input the first number:");
+      let num2 = +prompt("please input the second number:");
+      let sp = prompt("please input the one of + - * /:");
+      // 2.logic
+      switch (sp) {
+        case "+":
+          alert(`you calculate's answer is ${num1 + num2}`);
+          break;
+        case "-":
+          alert(`you calculate's answer is ${num1 - num2}`);
+          break;
+        case "*":
+          alert(`you calculate's answer is ${num1 * num2}`);
+          break;
+        case "/":
+          alert(`you calculate's answer is ${num1 / num2}`);
+          break;
+      }
+    </script>
+  </body>
+</html>

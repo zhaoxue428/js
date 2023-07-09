@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+
+        table{
+            /* 合并相鄰邊框 */
+            border-collapse: collapse;
+            height: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th{
+            padding: 5px 30px;
+        }
+
+        table,th,td{
+            /* 有邊框 */
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h2>訂單確認</h2>
+    <script>
+        // 1.用戶輸入
+        let price = +prompt('請輸入商品價格: ')//把price從string轉換到number型
+        let num = +prompt('請輸入商品數量: ')
+        let adr = prompt('請輸入收貨地址: ')
+        // 2.計算價格
+        let total = price * num
+        // 3.頁面打印渲染
+        document.write(`
+        <table>
+             <tr>
+                <th>商品名稱</th>
+                <th>商品價格</th>
+                <th>商品數量</th>
+                <th>縂價</th>
+                <th>收貨地址</th>
+            </tr>
+            <tr>
+                <td>小米手機青春PLUS</td>
+                <td>${price}元</td>
+                <td>${num}</td>
+                <td>${total}元</td>
+                <td>${adr}</td>
+            </tr>
+        </table>
+        `)
+
+    </script>
+</body>
+</html>
