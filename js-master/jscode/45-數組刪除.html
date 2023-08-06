@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arr.pop()  --刪除；刪除最後一個元素，並返回該元素的值
+        let arr = [1,2,3]
+        arr.pop()//不帶參數
+        console.log(arr)//[1,2]
+
+
+        //arr.shift()  --刪除第一個元素
+        let arr1 = [1,2,3]
+        arr1.shift()//不帶參數
+        console.log(arr1)//[2,3]
+
+
+        //arr.splice  --刪除指定元素
+        //arr.splice(start,deleteCount)
+        //arr.splice(起始位置，刪除幾個元素)
+        let arr2 = [1,2,3,4,5]
+        arr2.splice(1,1)
+        //arr2.splice(1)//從1這個位置 開始刪除到最後
+        console.log(arr2)
+
+
+    </script>
+</body>
+</html> 

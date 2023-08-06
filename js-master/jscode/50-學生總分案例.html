@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getArrSum(arr = []){
+            console.log(arr)//[1,2,3,4,5]
+            let sum = 0
+            for(let i = 0; i < arr.length; i++){// 此處i為0
+                sum += arr[i]
+            }
+            console.log(sum)
+        }
+        getArrSum([1,2,3,4,5])//15
+        getArrSum([11,22,33])//66
+        getArrSum()
+    </script>
+</body>
+</html>

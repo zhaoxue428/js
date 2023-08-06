@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 数组对象
+        let students = [
+            { name :'lily', age : 18, gender: 'boy', hometown: 'hebei'},
+            { name :'linda', age : 18, gender: 'girl', hometown: 'jilin'},
+            { name :'Nancy', age : 18, gender: 'boy', hometown: 'hebei'},
+            { name :'bill', age : 18, gender: 'girl', hometown: 'beijing'}
+        ]
+        for(let i = 0; i < students.length; i++){
+            console.log(i) // 下表索引号 --0，1，2，3
+            console.log(students[i]) // 每个对象 --结果如下
+            // { name :'lily', age : 18, gender: 'boy', hometown: 'hebei'},
+            // { name :'linda', age : 18, gender: 'girl', hometown: 'jilin'},
+            // { name :'Nancy', age : 18, gender: 'boy', hometown: 'hebei'},
+            // { name :'bill', age : 18, gender: 'girl', hometown: 'beijing'}
+            console.log(students[i].name) // lily linda Nancy bill
+        }
+    </script>
+</body>
+</html>

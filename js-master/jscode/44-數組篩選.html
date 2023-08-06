@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //篩選出元素大與2的，存放到新的數組裡
+        let arr = [1,2,3,4]
+        let arr1 = []
+        for(let i = 0; i < arr.length; i++){
+            if (arr[i] > 2){
+                arr1.push(arr[i])
+            }
+        }
+        console.log(arr1)
+
+        
+        //數組去0
+        let arr2 = [0,1,2,3,4,5,6]
+        let arr3 = []
+        for (let i = 0; i < arr2.length; i++){
+            if (arr2[i] !== 0){
+                arr3.push(arr2[i])
+            }
+        }
+        console.log(arr3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //實現用戶輸入什麼，數組裡面就是什麼.渲染柱形圖，第一季度到第四季度，並且y軸到值是變動的
+        //1. 四次彈窗效果
+        let arr = []
+        for (let i = 0;i <= 4; i++){
+            // let num = prompt(`請輸入第${i}季度的數據:`)
+            // arr.push(num)
+            arr.push(prompt(`請輸入第${i}季度的數據:`))
+        }
+        console.log(arr)
+
+        //盒子開頭
+        document.write(` <div class="box">`)
+        //盒子中間 利用循環的模式
+        for(let i = 0; i < arr.length; i++){
+            documetn.write(`
+                <div style="height: ${arr[i]}px;">
+                    <span>${arr[i]}</span>
+                    <h4>第${i + 1}季度</h4>
+                </div>
+            `)
+        }
+        //盒子結尾
+        document.write(` </div>`)
+    </script>
+</body>
+</html>

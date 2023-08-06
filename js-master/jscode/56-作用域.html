@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //全局作用域 and 局部作用域
+        //-- 全局 ： 獨立的js文件 或 整個script標籤內部
+        //-- 局部 ： 在函數內部寫的變量
+
+
+        let num = 10 // 1. 全局變量
+        console.log(num) // 10
+        function fn(){
+            console.log(num) // 10
+        }
+        fn()
+
+
+        // 2. 局部變量
+        function fun(){
+            let str = 'pink'
+            console.log(str) //pink
+        }
+        console.log(str) // undefined
+    </script>
+</body>
+</html>

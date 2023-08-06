@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 立即執行函數  --避免變量衝突污染; 無需調用，立即執行
+        (function(){
+            console.log(11)
+        })()//11
+
+
+        //2. 立即執行函數寫法
+        (function(){
+            let num = 10
+        })();// 必須加分號
+        (function(){
+            let num = 10
+        })();
+
+        //第一種寫法  --((){})();
+        (function(x,y){
+            console.log(x + y)// 3
+        })(1,2);
+
+
+        //第二種寫法  -- ((){}());
+        (function(x,y){
+            console.log(x + y)
+        }(1,3))
+
+        
+
+    </script>
+</body>
+</html>

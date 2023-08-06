@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(x,y){
+            console.log(x + y)
+        }
+        fn(1, 3)
+
+
+        //邏輯中斷  && ｜｜  --當滿足一定條件時右邊的不再執行
+
+
+        //||一真則中斷
+        let age = 18
+        console.log(true || age++)//18
+
+
+        //&&一假則中斷
+        console.log(false && age++)//18
+
+
+        console.log(11 && 22) //都是真，則返回最後一個真值
+        console.log(11 || 22) //輸出第一個真值
+
+
+        function fn(x,y){
+            x = x || 0  //如果x沒有值，則為0
+            y = y || 0
+            console.log(x + y)
+        }
+        fn()
+
+
+        //利用逻辑或中断  --｜｜0 
+    </script>
+</body>
+</html>

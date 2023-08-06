@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //有些函數有返回值，有些函數沒有返回值
+        //函數的返回值
+        function fn(){
+            return 20
+        }
+        //相當於執行了 fn() 調用者 fn() = 20
+        console.log(fn())//注意，打印的是fn()
+        let re = fn()
+        console.log(re)
+
+
+        //求和函數
+        function getSum(x,y){//形參
+            return x + y
+        }
+        let sum = getSum(1,2)//實參
+        console.log(sum)
+
+
+        //函數不一定需要有返回值，但當沒有返回值時，我們想調用它並試圖將返回值賦給變量時，變量的值為undefined
+
+
+        //求最大函數值
+        function maxResult(x,y){
+            return x > y ? x : y
+        }
+        let max = maxResult(1,2)
+        console.log(max)
+
+
+        //求數組中最大值，並返回該最大值
+        function getMaxArray(arr = []){
+            let max1 = array[0]
+            for(let i = 1; i < array.length; i++){
+                if(max1 < array[i]){
+                    max1 = array[i]
+                }
+            }
+            return max1
+        }
+        let max1 = getMaxArray([1,2,3,4])
+        console.log(max1)
+
+
+        //求數組中最大值和最小值，並返回最大值和最小值
+        function getArray(arr = []){
+            let max2 = array[0]
+            let min = array[0]
+            for(let i = 1; i < array.length; i++){
+                if(max2 < array[i]){
+                    max2 = array[i]
+                }
+                if(min > array[i]){
+                    min = array[i]
+                }
+            }
+            return [max2, min]//用數組來裝返回的多個值
+        }
+        let max2 = getArray([1,2,3,4])
+        let min = getArray([1,2,3,4])
+        console.log(max2)
+        console.log(`數組返回的最大值為:${max2[0]}`);
+        console.log(`數組返回的最小值為:${min[1]}`);
+    </script>
+</body>
+</html>

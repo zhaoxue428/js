@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //math.floor - 向下取整的函数
+        let arr = ['lily', 'nancy', 'linda']
+        let random = Math.floor(Math.random() * arr.length) // math.random - >随机生成0～1之间的小数，此时random的范围为【0-2】
+        document.write(arr[random])
+
+        // 1. splice(起始位置（下标)，删出几个元素）
+        arr.splice(random, 1)
+        console.log(arr) 
+
+        let array = ['','','']
+        let random1 = Math.floor(Math.random() * arr.length)
+        document.write(arr[random])
+
+        arr.splice(random,1)
+        console.log(arr)
+    </script>
+</body>
+</html>

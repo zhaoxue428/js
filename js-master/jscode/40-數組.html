@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //聲明數組的兩種方式
+         //1. 字面量聲明書組
+         let arr = [1,2,'pink',true]
+         //2. 使用 new array 構造函數聲明 了解
+         let arr1 = new Array(1,2,3,4)
+         console.log(arr1)//[1,2,3,4]
+
+
+         //求數組【2，6，1，7，4】裏面所有元素的和以及平均值
+         let arr2 = [2,6,1,7,4]
+         let sum = 0
+         let average = 0
+         for(let i = 0;i < arr2.length; i++){
+            sum += arr2[i]
+            
+         }   
+         average = sum / arr2.length
+         console.log(sum,average)
+         console.log(`the length of array2 is:${sum}`)
+         console.log(`the average of array2 is:${sum / arr.length}`)
+
+         //求數組最大值
+         let arr3 = [1,2,3,4]
+         let max = arr3[0]
+         for (let i = 0;i < arr3.length; i++){
+            if(max < arr3[i]){
+                max = arr3[i]
+            }
+         }
+         console.log(max)
+         console.log(`最大的值為:${max}`)
+         //for循環可以通過三元運算寫
+         max < arr3[i]? arr3[i] : max
+
+
+         //求數組最小值
+         let arr4 = [1,2,3,4]
+         let min = arr4[0]
+         for(let i = 0; i < arr4.length; i++){
+            if(min > arr4[i]){//min > arr4[i] ? arr4[i] : min
+                min = arr4[i]
+            }
+         }
+         console.log(`最小的值為:${min}`)
+
+
+         
+
+    </script>
+</body>
+</html>

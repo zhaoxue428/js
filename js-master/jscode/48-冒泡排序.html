@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //冒泡排序  --簡而言之就是尋找規律
+        //實現把數組從小到大排序  
+        //--外層for循環：一共需要的躺數為arr.length - 1
+        //--內層for循環：每一趟交換次數arr.length - i - 1
+
+
+        //my code
+        let arr1 = [5,4,3,2,1]
+        for(let i = 0; i < arr1.length; i++){
+            if(arr1[i] > arr1[i+1]){
+                let changeNumber = arr1[i]
+                arr1[i] = arr1[i+1]
+                arr1[i+1] = changeNumber
+            }
+        }
+        console.log(arr1)
+
+
+        //correct code
+        let arr = [3,4,5,2,1]
+        for(let i = 0;i < arr.length - 1; i++){
+            for(let j = 0;j < arr.length - i - 1; j++){
+                if(arr[j] > arr[j + 1]){
+                let changeNumber = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = changeNumber
+            }
+            }
+        }
+        console.log(arr)
+
+
+        //升序
+        arr.sort()//【1，2，3，4，5】
+
+
+        //sort 升序排序
+        arr.sort(function(a,b){
+            return a - b
+        })
+        console.log(arr)
+
+
+        //sort 降序排序
+        arr.sort(function(a,b){
+            return b - a
+        })
+        console.log(arr)
+
+
+
+
+
+    </script>
+</body>
+</html>

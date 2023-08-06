@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = []
+        console.log(arr)
+        console.log(arr[0])//undefined
+        arr[0] = 1
+        arr[1] = 5
+
+        //修改
+        let arr1 = ['pink','apple','banana']
+        arr1[0] = 'hotpink'
+        console.log(arr1) 
+
+        //循環修改  --遍歷數組
+        //給所有的數組元素後面加個老師
+        for (let i = 0; i < arr1.length; i++){
+            arr1[i] = arr1[i] + '老師'//字符串拼接
+        }
+        console.log(arr1)
+
+    </script>
+</body>
+</html>

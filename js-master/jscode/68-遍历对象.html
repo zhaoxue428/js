@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.对象是无序的，所以没有索引号，没办法像数组一样索引
+        
+        let arr = ['pink','green','blue']
+        for(let k in arr){
+            console,log(k) // 数组的下标 索引号 但是是字符串 ‘0’
+            console.log(arr[k]) // arr[k]
+        }
+
+
+        // for in 不推荐遍历数组， 推荐遍历对象
+        // 2. 遍历对象 for in
+        let obj = {
+            uname: 'pink teacher',
+            age :18,
+            gender: 'girl'
+        }
+        for(let k in obj){
+            console.log(k) // 属性名 ‘uname’ ‘age’ --字符串
+            console.log(obj.k) //undefined
+            // console.log(obj.'uname') // 等同于 obj.k - > undefined
+            // console.log(obj['uname'])  'uname' === k
+            console.log(obj[k]) //pink teacher 18 girl --输出属性值 obj[k]
+        }
+
+
+        // 3. 小结 --k是对象的属性名，[k]是属性值
+    </script>
+</body>
+</html>

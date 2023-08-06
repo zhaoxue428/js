@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert(),prompt(),console.log()遮羞都是js函數，只不過已經封裝好了，可以直接使用
+        
+        
+        //函數聲明
+        function sayHi(){
+            console.log('hi~~~')
+        }
+
+
+        //函數調用  使用（）調用函數 函數調用才會執行，不調用不執行
+        sayHi()
+        sayHi()
+
+
+        //函數封裝  --求兩個數的和
+        function getSum(){
+            let num1 = +prompt('請輸入第一個數：')
+            let num2 = +prompt('請輸入第二個數：')
+            console.log(sum1 + sum2)
+        }
+        getSum()//函數必須調用，不調用不執行
+
+
+        //求1-100的累加和
+        function getSumHunderd(){
+            let sum = 0
+            for(let i = 1; i <= 100; i++){
+                sum += i
+            }
+            console.log(sum)
+        }
+        getSumHunderd()
+
+
+        //函數傳參
+        function getSquare(num1){
+            document.write(num1 * num1)
+        }
+
+        function getSum(num1,num2){
+            docoment.write(num1 + num2)
+        }
+
+
+        function getSum(end){  //end = 50
+            let sum = 0
+            for(let i = 1; i <= end; i++){
+                sum += i
+            }
+            console.log(sum)
+        }
+        getSum(50)//1~50
+
+
+        //函數傳參：把要計算的數字傳到函數內
+        //聲明語法
+        //function 函數名（參數列表）{函數體}
+
+
+        function getSum(start,end){  //end = 50  //形參
+            let sum = 0
+            for(let i = start; i <= end; i++){
+                sum += i
+            }
+            console.log(sum)
+        }
+        getSum(1,50)//1~50  //實參
+
+
+        //函數求和案例
+        function getSum1(num1,num2){
+            document.write(num1 + num2)
+        }
+        getSum1(1,2)
+        getSum1() //NaN
+
+
+        //給形參默認值 --參數是數組的情況下:arr = []
+        function getSum2(x = 0, y = 0){
+            document,write(x + y)
+        }
+        getSum2() //結果是0， 而不是NaN 
+        getSum2(1,2) //結果是3
+
+    </script>
+</body>
+</html>

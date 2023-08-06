@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //什么是对象  object  --js的一种数据类型，无序的数据的集合
+
+        //声明对象  --let xx = {}
+        let person = {}
+
+        //对象有属性（名词）和方法（动词）组成
+        // 1. 声明对象
+        let obj = {
+            uname: 'pink teacher',
+            age :18,
+            gender: 'girl'
+        }
+        console.log(obj)
+        console.log(typeof obj) // object
+
+        // 2. 使用属性  --对象增删改查
+        // 查 --对象名.属性
+        console.log(obj.uname)
+        // 改 or 增
+        obj.gender = 'boy'
+        // 删
+        delete obj,uname
+
+        
+    </script>
+</body>
+</html>

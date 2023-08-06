@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    span{
+        display: inline-block;
+        width: 100px;
+        padding: 5px 10px;
+        border : 1px solid pink;
+        margin: 2px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(149, 83, 94, .4);
+        background-color: rgba(255,192 , 203, .1);
+        text-align: center;
+        color: hotpink;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+        //利用for循環輸出三句話月薪過萬
+        for (let i = 1; i <= 3; i++) {
+            document.write('yuexinguowan')
+        }
+
+         
+        //利用for循環輸出1到100歲
+        for(let i = 1; i<= 100; i++){
+            docoment.write(`this year i am ${i} years <br>`)
+
+        }
+
+
+        //求1 到100 之間所有的偶數和
+        let sum = 0
+        for(let i = 1; i <= 100; i++){
+            if(i % 2 === 0){
+                sum += i
+            }
+        }
+        docoment.write(`1-100 的偶數和為${sum}`)
+
+
+        //for循環 打印數組
+        let arr = ['a','b','c','d']
+        // 常規操作  --console.log(arr[0])
+        for(let i = 0; i <=arr.length; i++){
+            console.log(arr[i])
+        }
+
+
+        //退出循環  --break；continue
+        //continue
+        for(let i = 0;i <= 5; i++){
+            if(i === 3){
+                continue//退出本次循環，本次循環中continue下面的語句不再執行
+            }
+            console.log(i)//1 2 4 5
+            document.write(i)
+        }
+        //break
+        for(let i = 0;i <= 5; i++){
+            if(i === 3){
+                break//退出整個循環
+            }
+            console.log(i)//1 2
+            document.write(i)
+        }
+
+
+        //for循環嵌套
+        //for(){for(){} }
+
+
+        // 每天記憶5個單詞，共三天
+        // 外層打印 第n天
+        for(let i = 0;i <= 3; i++){
+            docoment.write(`第${i}天<br>`)
+            // 裡層循環打印 第幾個單詞
+            for(let j = 0;j <= 5; j++){
+                docoment.write(`記住了第${j}個單詞<br>`)
+            }
+        }
+
+        //打印五行五列小星星
+        for(let i = 1; i <= 5; i++){
+            for(let j = 0; j <= 5; j++){
+                docoment.write('o')
+            }
+            //進行換行顯示
+            docoment.write('<br>')
+        }
+
+
+        //根據輸入的行數和沒行的星星的個數，來決定顯示
+        let row = +prompt('please input the suu of row:')
+        let col = +prompt('please input the col of star:')
+        for(i = 1; i <= row; i++){
+            for(j = 1; j <= col; j++){
+                docoment.write('o')
+            }
+            docometn.write('<br>')
+        }
+
+
+        //打印直角三角形
+        for(let i = 1; i <= 5; i++){
+            for(let j = 1; j <= i; j++){
+                docoment.write('o')
+            }
+            docoment.write('<br>')
+        }
+
+
+        //九九乘法表
+        for(let i = 1; i <= 9; i++){
+            for(let j = 1; j <= i; j++){
+                docoment.write('1 X 1 = 1')
+            }
+            docoment.write('<br>')
+        }
+
+
+        //真正的九九乘法表  --美麗版
+        for(let i = 1; i <= 9; i++){
+            for(let j = 1; j <= i; j++){
+                docoment.write(`<span>${j}X ${i} = ${i * j}</span>`)//魔法字符串
+            }
+            docoment.write('<br>')
+        }
+    </script>
+</body>
+
+</html>

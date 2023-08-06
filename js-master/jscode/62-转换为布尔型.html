@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //转换为布尔型
+        console.log(Boolean('pink'))// true
+        console.log(Boolean(''))// false 
+        
+
+        // 布尔型常用
+        if(true){
+
+        }
+
+
+        //&&  --与逻辑中断
+        console.log(false && 20) //false
+        console.log(undefined && 20) //undefined  --不是布尔型，所以不会返回false
+        console.log(null && 20) // null
+        console.log(0 && 20) // 0
+        console.log(10 && 20) // 20
+
+
+        //隐式转换
+        '' - 1 //-1  --减法运算符只作用于数字，字符串的情况下，空字符串会隐式转换为0
+        '2' - 1// 1
+        'pink teacher' - 1 // NaN
+        null + 3//3  --null隐式转换后被当作0看
+        undefined + 3//NaN
+        null == undefined // true
+        null === undefined // false
+        NaN + 1 // NaN
+        NaN == NaN //false
+
+
+
+    </script>
+</body>
+</html>

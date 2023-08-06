@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //如果函數內部，變量沒有聲明，也當全局變量看，但強烈不推薦
+        let num = 20
+        function fn(){
+            let num = 10
+        }
+        fn()
+        console.log(num) // 20
+
+        function fn(){
+             num = 10
+        }
+        fn()
+        console.log(num) // 10
+
+
+        //函數套函數
+        let name = 30
+        function fn(){
+            let name = 20
+            function fun(){
+                let name = 30
+                console.log(name) // 30
+            }
+            fun()
+        }
+        fn()
+
+
+        let year = 30
+        function fn(){
+            let year = 20
+            function fun(){
+                // let year = 30
+                console.log(year) // 20
+            }
+            fun()
+        }
+        fn()
+
+
+        let age = 10
+        function fn(){
+            // let age = 20
+            function fun(){
+                // let age = 30
+                console.log(age) // 10
+            }
+            fun()
+        }
+        fn()
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //用戶輸入
+        let second = +prompt('請輸入秒數:')
+        //封裝函數
+        function getTime(t){
+            // console.log(t)// 總秒數
+            // 轉換
+            let h = parseInt(t / 60 / 60 % 24) // 如果不聲明，會被當成全局變量使用
+            let m = parseInt(t / 60 % 60)
+            let s = parseInt(t % 60)
+            h = h < 10 ? '0' + h : h// 拼接0
+            m = m < 10 ? '0' + m : m// 拼接0
+            s = s < 10 ? '0' + s : s// 拼接0
+            // console.log(h, m, s)
+            return (`轉換完畢後是${h}小時${m}分${s}秒`)
+        }
+        let str = getTime(second)
+        docoment.write(str)
+
+
+
+
+        //自己寫一遍
+        let abc = +prompt('please input the number:')
+
+        function xx(r){
+            let a = parseInt(r / 60 / 60 % 24) // 如果不聲明，會被當成全局變量使用
+            let b = parseInt(r / 60 % 60)
+            let c = parseInt(r % 60)
+
+            a = a < 10 ? '0' + a : a
+            b = b < 10 ? '0' + b : b
+            c = c < 10 ? '0' + c : c
+            return (`you want the number is ${a}xiaoshi ${b}fen ${c}miao`)
+        }
+        let s = xx(abc)
+        docoment.write(s)
+        
+    </script>
+</body>
+</html>
